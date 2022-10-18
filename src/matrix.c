@@ -68,8 +68,6 @@ void PrintMatrix2C(
 ) {
   const int elementCount = matrix.shape.x * matrix.shape.y;
 
-  char string[STRING_BUFFER_SIZE];
-
   for (int i=0; i < elementCount; i++) {
     const double element = matrix.data[i];
 
