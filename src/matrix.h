@@ -1,5 +1,5 @@
-#ifndef MATRIXLIB_H
-#define MATRIXLIB_H
+#ifndef MATRIX_H
+#define MATRIX_H
 
 #include "stdlib.h"
 
@@ -48,4 +48,4 @@ void PrintMatrix2C(
 
 void PrintMatrix2Element(const Matrix2 matrix, int x, int y);
 
-#endif // MATRIXLIB_H
+#endif // MATRIX_H
