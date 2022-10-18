@@ -29,8 +29,8 @@ typedef struct Matrix3 {
 } Matrix3;
 
 
-Matrix2 AllocateMatrix2(Vector2 shape, double* data);
-Matrix2 AllocateMatrix2E(Vector2 shape);
+Matrix2 CreateMatrix2(Vector2 shape, double* data);
+Matrix2 CreateMatrix2E(Vector2 shape);
 
 const int GetMatrix2ElementCount(const Matrix2 matrix);
 

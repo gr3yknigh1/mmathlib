@@ -8,7 +8,7 @@
 #define STRING_BUFFER_SIZE 20
 
 
-Matrix2 AllocateMatrix2(
+Matrix2 CreateMatrix2(
   Vector2 shape,
   double* data
 ) {
@@ -19,8 +19,8 @@ Matrix2 AllocateMatrix2(
 }
 
 
-Matrix2 AllocateMatrix2E(Vector2 shape) {
-  return AllocateMatrix2(
+Matrix2 CreateMatnix2E(Vector2 shape) {
+  return CreateMatrix2(
     shape,
     malloc(sizeof(double) * shape.x * shape.y)
   );
