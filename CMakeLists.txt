@@ -1,10 +1,8 @@
-
 cmake_minimum_required(VERSION 3.0)
 project(mathlib C)
 set(CMAKE_C_STANDARD 99)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
-
 
 # -- Include source files
 set(SOURCE_DIR "${CMAKE_CURRENT_LIST_DIR}/src")
