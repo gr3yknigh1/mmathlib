@@ -5,12 +5,8 @@
 #include "matrix.h"
 
 
-Matrix2 CreateMatrix2(
-  Vector2 shape,
-  double* inputElements
-) {
-
-  // NOTE(gr3yknigh1): Copying items from data only in range of shape
+Matrix2 CreateMatrix2(Vector2 shape, double* inputElements) {
+  // @NOTE(gr3yknigh1) Copying items from data only in range of shape
   int itemCount = shape.x * shape.y;
   double* elements = malloc(sizeof(double) * itemCount);
   for (int i = 0; i < itemCount; i++) {
@@ -54,6 +50,7 @@ const double GetMatrix2ElementV(const Matrix2 matrix, Vector2 position) {
 }
 
 
+// @TODO(gr3yknigh1) Remove or move to another module
 char* Slice(char* origin, int from, int to) {
   char* output = malloc(sizeof(char) * (to + 1));
   int count = 0;
@@ -65,12 +62,7 @@ char* Slice(char* origin, int from, int to) {
 }
 
 
-void PrintMatrix2C(
-  const Matrix2 matrix,
-  char separator,
-  char lineEnd,
-  char final
-) {
+void PrintMatrix2C(const Matrix2 matrix, char separator, char lineEnd, char final) {
   const int elementCount = matrix.shape.x * matrix.shape.y;
 
   for (int i=0; i < elementCount; i++) {
@@ -85,9 +77,11 @@ void PrintMatrix2C(
   printf("%c", final);
 }
 
+
 void PrintMatrix2(const Matrix2 matrix) {
   PrintMatrix2C(matrix, ' ', '\n', '\n');
 }
+
 
 void PrintMatrix2Element(const Matrix2 matrix, int x, int y) {
   printf(
