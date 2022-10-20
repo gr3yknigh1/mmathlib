@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "mmath.h"
 
+
 #define true  1
 #define false 0
 #define OK    0
 #define ERR   1
+
 
 int main(void) {
 
