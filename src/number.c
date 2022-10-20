@@ -17,7 +17,7 @@ int IntLength(int number) {
 
 char* Int2String(void* pointer) {
   int* number = (int*)pointer;
-  char* string = malloc(IntLength(*number) * sizeof(int));
+  char* string = malloc(IntLength(*number) * sizeof(char));
   sprintf(string, "%d", *number);
   return string;
 }
