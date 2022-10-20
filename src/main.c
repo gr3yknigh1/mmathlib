@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "mmath.h"
 
+#define true  1
+#define false 0
+#define OK    0
+#define ERR   1
+
 int main(void) {
 
   LinkedList list = {
@@ -14,11 +19,6 @@ int main(void) {
 
   for (int i = 0; i < ARR_SIZE; i++) {
     PushItem(&list, &arr[i], sizeof(int));
-#define true  1
-#define false 0
-#define OK    0
-#define ERR   1
-
   }
 
   printf("Length: %d\n", list.length);
