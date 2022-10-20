@@ -7,16 +7,24 @@
 
 Matrix2 CreateMatrix2(
   Vector2 shape,
-  double* data
+  double* inputElements
 ) {
+
+  // NOTE(gr3yknigh1): Copying items from data only in range of shape
+  int itemCount = shape.x * shape.y;
+  double* elements = malloc(sizeof(double) * itemCount);
+  for (int i = 0; i < itemCount; i++) {
+    elements[i] = inputElements[i];
+  }
+
   return (Matrix2) {
-    .data = data,
+    .data = elements,
     .shape = shape
   };
 }
 
 
-Matrix2 CreateMatnix2E(Vector2 shape) {
+Matrix2 CreateMatrix2E(Vector2 shape) {
   return CreateMatrix2(
     shape,
     malloc(sizeof(double) * shape.x * shape.y)
