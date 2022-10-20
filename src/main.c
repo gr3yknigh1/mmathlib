@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include "mmath.h"
 
-#define ARR_SIZE 8
-
-
 int main(void) {
 
   LinkedList list = {
@@ -11,7 +8,9 @@ int main(void) {
     .length = 0,
   };
 
-  int arr[ARR_SIZE] = { 1, 2, 3, 4, 4, 4, 5, 9 };
+  const int ARR_SIZE = 8;
+  int* arr = malloc(sizeof(int) * ARR_SIZE);
+  arr = (int[]){ 1, 2, 3, 4, 4, 4, 5, 9 };
 
   for (int i = 0; i < ARR_SIZE; i++) {
     PushItem(&list, &arr[i], sizeof(int));
