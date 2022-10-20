@@ -6,6 +6,14 @@
 #include "linked_list.h"
 
 
+LinkedList CreateListEmpty() {
+  return (LinkedList) {
+    .root = NULL,
+    .length = 0,
+  };
+}
+
+
 LinkedListItem* GetItem(LinkedList* list, int index) {
   LinkedListItem* current = list->root;
   for (int i = 0; i < list->length; i++) {

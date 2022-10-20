@@ -17,6 +17,7 @@ typedef struct LinkedList {
 } LinkedList;
 
 
+LinkedList CreateListEmpty();
 LinkedListItem* GetItem    (LinkedList* list, int index);
 LinkedListItem* GetLastItem(LinkedList* list);
 
