@@ -5,9 +5,6 @@
 #include "matrix.h"
 
 
-#define STRING_BUFFER_SIZE 20
-
-
 Matrix2 CreateMatrix2(
   Vector2 shape,
   double* data
