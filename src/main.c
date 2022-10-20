@@ -1,27 +1,46 @@
 #include <stdio.h>
-#include "matrix.h"
+#include "mmath.h"
 
-int main() {
+#define ARR_SIZE 8
 
-  Matrix2 matrix = CreateMatrix2(
-    (Vector2){ 4, 3 },
-    (double[]){
-      3, 7, 9, 4,
-      4, 0, 2, 1,
-      2, 3, 4, 0
-   }
-  );
 
-  PrintMatrix2(matrix);
+int IntLength(int number) {
+  int length = 0;
 
-  for (int y=0; y < matrix.shape.y; y++) {
-    for (int x=0; x < matrix.shape.x; x++) {
-      PrintMatrix2Element(matrix, x, y);
-      printf(" ");
-    }
-    printf("\n");
+  do {
+    length++;
+    number = number / 10;
+  } while(number != 0);
+
+  return length;
+}
+
+
+char* Int2String(void* pointer) {
+  int* number = (int*)pointer;
+  char* string = malloc(IntLength(*number) * sizeof(int));
+  sprintf(string, "%d", *number);
+  return string;
+}
+
+
+int main(void) {
+
+  LinkedList list = {
+    .root = (LinkedListItem*)0,
+    .length = 0,
+  };
+
+  int arr[ARR_SIZE] = { 1, 2, 3, 4, 4, 4, 5, 9 };
+
+  for (int i = 0; i < ARR_SIZE; i++) {
+    PushItem(&list, &arr[i], sizeof(int));
   }
 
-  return 0;
+  printf("Length: %d\n", list.length);
+
+  PrintList(&list, Int2String, ", ");
+
+  return OK;
 }
 
