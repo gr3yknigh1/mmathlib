@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
@@ -14,7 +15,7 @@ LinkedList CreateListEmpty() {
 }
 
 
-LinkedListItem* GetItem(LinkedList* list, int index) {
+LinkedListItem* GetItem(LinkedList* list, uint index) {
   LinkedListItem* current = list->root;
   for (int i = 0; i < list->length; i++) {
     if (i == index) {
