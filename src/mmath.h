@@ -8,7 +8,6 @@
 
 #ifndef MMATH_H
 #define MMATH_H
-#define MMATH_H
 
 #include "matrix.h"
 #include "number.h"
