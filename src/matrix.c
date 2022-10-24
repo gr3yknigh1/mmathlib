@@ -1,8 +1,19 @@
 #include <stdlib.h>
-#include <memory.h>
 #include <stdio.h>
+#include <memory.h>
+#include <math.h>
 
 #include "matrix.h"
+
+
+double GetVector2Length(Vector2 vector) {
+  return sqrt(vector.x * vector.x + vector.y * vector.y);
+}
+
+
+double GetVector3Length(Vector3 vector) {
+  return sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z);
+}
 
 
 Matrix2 CreateMatrix2(Vector2 shape, double* inputElements) {

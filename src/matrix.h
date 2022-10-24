@@ -17,6 +17,10 @@ typedef struct Vector3 {
 } Vector3;
 
 
+double GetVector2Length(Vector2 vector);
+double GetVector3Length(Vector3 vector);
+
+
 typedef struct Matrix2 {
   double* data;
   Vector2 shape;
