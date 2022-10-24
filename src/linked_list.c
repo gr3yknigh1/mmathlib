@@ -32,7 +32,7 @@ LinkedListItem* GetLastItem(LinkedList* list) {
 }
 
 
-void SetItem(LinkedList* list, int index, void* data) {
+void SetItem(LinkedList* list, uint index, void* data) {
   GetItem(list, index)->data = data;
 }
 
@@ -59,7 +59,7 @@ void FreeItem(LinkedListItem* item) {
 }
 
 
-void RemoveItem(LinkedList* list, int index) {
+void RemoveItem(LinkedList* list, uint index) {
   if (index > (list->length - 1)) {
     return;
   }
