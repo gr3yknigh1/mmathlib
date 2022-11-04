@@ -1,24 +1,8 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-#include "stdlib.h"
-
-
-typedef struct Vector2 {
-  double x;
-  double y;
-} Vector2;
-
-
-typedef struct Vector3 {
-  double x;
-  double y;
-  double z;
-} Vector3;
-
-
-double GetVector2Length(Vector2 vector);
-double GetVector3Length(Vector3 vector);
+#include <stdlib.h>
+#include "vector.h"
 
 
 typedef struct Matrix2 {
@@ -32,6 +16,9 @@ typedef struct Matrix3 {
   Vector3 shape;
 } Matrix3;
 
+
+double DotProductM2(Matrix2 a, Matrix2 b);
+double DotProductM3(Matrix3 a, Matrix3 b);
 
 Matrix2 CreateMatrix2(Vector2 shape, double* data);
 Matrix2 CreateMatrix2E(Vector2 shape);

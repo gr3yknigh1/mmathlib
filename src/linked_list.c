@@ -67,13 +67,13 @@ void RemoveItem(LinkedList* list, uint index) {
   LinkedListItem* item;
 
   if (index == 0) {
-    // NOTE(gr3yknigh1): If removing first item
+    // @NOTE(gr3yknigh1): If removing first item
     item = list->root;
     LinkedListItem* nextItem = GetItem(list, index + 1);
     list->root = nextItem;
 
   } else if (index == (list->length - 1)) {
-    // NOTE(gr3yknigh1): If removing last item
+    // @NOTE(gr3yknigh1): If removing last item
     item = GetItem(list, index);
     LinkedListItem* previousItem = GetItem(list, index - 1);
     previousItem->next = NULL;

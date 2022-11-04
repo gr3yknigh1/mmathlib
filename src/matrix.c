@@ -1,19 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <memory.h>
-#include <math.h>
 
 #include "matrix.h"
 
 
-double GetVector2Length(Vector2 vector) {
-  return sqrt(vector.x * vector.x + vector.y * vector.y);
-}
-
-
-double GetVector3Length(Vector3 vector) {
-  return sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z);
-}
+double DotProductM2(Matrix2 a, Matrix2 b);
+double DotProductM3(Matrix3 a, Matrix3 b);
 
 
 Matrix2 CreateMatrix2(Vector2 shape, double* inputElements) {
@@ -71,6 +64,7 @@ char* Slice(char* origin, int from, int to) {
   }
   return output;
 }
+
 
 
 void PrintMatrix2C(const Matrix2 matrix, char separator, char lineEnd, char final) {
