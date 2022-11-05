@@ -53,7 +53,9 @@ bool IsEqualVector2(Vector2 a, Vector2 b) {
 }
 
 
-bool IsEqualVector3(Vector3 a, Vector3 b);
+bool IsEqualVector3(Vector3 a, Vector3 b) {
+  return a.x == b.x && a.y == b.y && a.z == b.x;
+}
 
 
 Vector2 AddVector2(Vector2 a, Vector2 b) {
